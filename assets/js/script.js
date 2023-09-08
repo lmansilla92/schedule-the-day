@@ -22,6 +22,18 @@ $(document).ready(function () {
       $(this).children('.description').val(value);
     });
 
+    // Sets the current date
+    function currentDateAndTime() {
+      const dateElement = $('#date');
+      const timeElement = $('#time');
+      const currentDate = dayjs().format('dddd, MMMM D, YYYY');
+      const currentTime = dayjs().format('hh:mm:ss A');
+      dateElement.text(currentDate);
+      timeElement.text(currentTime);
+    }
+
+    currentDateAndTime();
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
