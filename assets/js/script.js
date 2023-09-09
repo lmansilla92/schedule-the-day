@@ -47,13 +47,12 @@ $(document).ready(function () {
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour.
   function timeBlockColor() {
+    // .each iterates through the time blocks to grab the value of the hour
     timeBlock.each(function() {
     // Declares variable of hour by grabbing the id of the time block which contains the number of the time but since it's a string it needs parseInt to return it as an integer
       const hour = parseInt(this.id);
-      console.log(hour);
       // Grabs the current hour by just the H value 
       const currentHour = dayjs().format('H');
-      console.log(currentHour);
       // Checks if time is equal to current time 
       if (hour == currentHour) {
         // Removes irrelevant class colors and adds class with color to represent present state
