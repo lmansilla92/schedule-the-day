@@ -63,6 +63,7 @@ $(document).ready(function () {
         // Removes irrelevant class colors and adds class with color to represent the past state
         $(this).removeClass('present future').addClass('past');
       } else {
+        // If neither if or if else are true, the class of future is added after removing the other classes
         $(this).removeClass('past present').addClass('future');
       };        
     });
